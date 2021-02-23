@@ -1,0 +1,36 @@
+.header 
+  display: flex
+  align-items: center
+  height: 20vh
+  min-height: 140px
+  &__wrapper
+    position: relative
+    display: flex 
+  &__menu 
+    display: flex 
+    align-items: center
+  &__main-logo 
+    position: absolute
+    display: flex 
+    flex-direction: column 
+    align-items: center
+    left: 50%
+    transform: translateX(-50%)
+  &__underlogo-text 
+    font-size: 20px
+    color: #323233
+
+.logo 
+  width: 500px
+
+.hamburger 
+  margin-right: 20px
+  &__line 
+    width: 30px 
+    height: 5px 
+    background-color: #fff
+    margin-bottom: 3px
+    &:last-child
+      margin-bottom: 0
+  &-title 
+    font-size: 30px
