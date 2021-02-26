@@ -9,18 +9,26 @@
   opacity: 1
   transition: 2s ease-in-out
 
+
+
 .hide-images-anim 
   transition: 1s
-  width: 70% !important
+  width: 80% 
   margin-left: auto
-  transform: translateX(0px) !important
+  .slider__img 
+    transition: 1.5s
+    filter: blur(2px) grayscale(100%)
+    pointer-events: none
+
 
 .open-images-anim 
   transition: 1s
-  width: auto
   margin-left: auto
-  transform: auto
-  
+  .slider__img 
+    transition: 2s
+
+
+
 .hamburger-anim 
   .hamburger__line 
     transition: 0.5s

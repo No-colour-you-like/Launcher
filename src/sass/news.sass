@@ -1,0 +1,67 @@
+.news 
+  &__wrapper 
+    display: grid
+    grid-template-columns: 1fr 1fr 
+    grid-template-rows: 600px 800px 800px
+    gap: 30px 30px 
+    grid-template-areas: "title-block title-block" "news-block-1 news-block-2" "news-block-3 news-block-4"
+
+.title-block 
+  display: flex
+
+.news-block 
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  overflow: hidden
+  background: url(../img/fire.jpg) no-repeat
+  background-size: 100% auto
+  border-bottom: 35px solid #151515
+  &-1 
+    background: url(../img/engi.jpg) no-repeat
+    background-size: 100% 
+  &-2 
+    background: url(../img/engi.jpg) no-repeat
+    background-size: 100% 
+  &-3
+    background: url(../img/news/4.jpg) no-repeat
+    background-size: 100% 
+  &-4
+    background: url(../img/news/5.jpg) no-repeat
+    background-size: 100% 
+  &__text 
+    height: 25% 
+    padding: 40px
+    background-color: #151515
+    transition: 1s
+    &:hover 
+      height: 55% 
+  &__uppertitle 
+    font-size: 30px 
+    margin-bottom: 10px 
+  &__title 
+    font-family: 'Lato', sans-serif 
+    font-size: 40px
+    margin-bottom: 20px
+    line-height: 1.3
+  &__info 
+    font-family: inherit
+    font-size: 20px
+    margin-bottom: 15px
+    line-height: 1.2
+
+
+.title-block 
+  grid-area: title-block
+
+.news-block-1
+  grid-area: news-block-1
+
+.news-block-2
+  grid-area: news-block-2 
+
+.news-block-3
+  grid-area: news-block-3
+
+.news-block-4
+  grid-area: news-block-4
