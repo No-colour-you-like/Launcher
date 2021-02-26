@@ -119,7 +119,7 @@ function fonts(params) {
 
 // Функцию нужно вызвать отдельно для создания спрайтов
 gulp.task('svgSprite', function() {
-  return gulp.src([source_folder + '/iconsprite/*.svg'])
+  return gulp.src([source_folder + '/img/iconsprite/*.svg'])
     .pipe(svgSprite({
       mode: {
         stack: {

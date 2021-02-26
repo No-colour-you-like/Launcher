@@ -1,0 +1,37 @@
+.display-block 
+  display: block
+
+.display-none
+  display: none
+
+.nav-anim 
+  height: 500px
+  opacity: 1
+  transition: 2s ease-in-out
+
+.hide-images-anim 
+  transition: 1s
+  width: 70% !important
+  margin-left: auto
+  transform: translateX(0px) !important
+
+.open-images-anim 
+  transition: 1s
+  width: auto
+  margin-left: auto
+  transform: auto
+  
+.hamburger-anim 
+  .hamburger__line 
+    transition: 0.5s
+    margin: 0
+    &:first-child 
+      transform: rotate(45deg) translateY(-7px)
+      transform-origin: left top
+    &:nth-last-child(2)
+      opacity: 0
+    &:last-child 
+      transform: rotate(-45deg) translateY(7px)
+      transform-origin: left bottom
+   
+

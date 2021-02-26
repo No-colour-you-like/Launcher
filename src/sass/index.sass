@@ -1,10 +1,59 @@
 .main 
+  min-height: 70vh
   display: flex
   align-items: center
-  min-height: 70vh
+  &__wrapper 
+    display: flex
+    overflow-x: hidden 
   &__slider 
+    position: relative
     @extend %flex-between
-
+    transition: 1s
+    transition-property: transform
+  
 .slider
+  &__slide 
+    @extend %flex-between
+  &-next, &-prev
+    position: absolute
+    background: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='iso-8859-1'?%3e%3c!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3e%3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512.002 512.002' style='enable-background:new 0 0 512.002 512.002;' xml:space='preserve'%3e%3cg%3e%3cg%3e%3cpath d='M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105 L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795 l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e") no-repeat
+    background-size: 60%
+    background-position: 12px center
+    box-shadow: 0 0 10px #fff 
+    width: 50px
+    height: 50px
+    top: 50%
+    background-color: rgba(#fff, 0.5)
+    border-radius: 50%
+    cursor: pointer
+    z-index: 1
+  &-next  
+    right: 300px
+    transform: translateY(-50%)
+  &-prev
+    left: 300px
+    transform: translateY(-50%) rotate(180deg) 
   &__img 
-    width: 90%
+    display: block
+    width: 100%
+    height: 60vh
+    margin-right: 20px
+    &-first
+      background: url(../img/rocket.jpg) no-repeat 
+      background-size: cover
+      background-position: center
+    &-second 
+      background: url(../img/fire.jpg) no-repeat
+      background-size: cover
+      background-position: center
+    &-third 
+      background: url(../img/engi.jpg) no-repeat
+      background-size: cover
+      background-position: center
+    &-fourth
+      background: url(../img/comps.jpg) no-repeat
+      background-size: cover
+      background-position: center
+
+     
+
