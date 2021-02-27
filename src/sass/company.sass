@@ -42,10 +42,19 @@
       background: url(../img/team.jpg) no-repeat 
       background-size: cover
       background-position: center
-  &__devs 
-    margin-left: 10px
-    &:before
-      background: url(../img/devs.jpg) no-repeat 
-      background-size: cover
-      background-position: center
+  &__devs
+    position: relative
+    &-video 
+      position: absolute
+      width: 100% 
+      height: 100%
+      top: 0
+      left: 0
+      object-fit: cover
+  // &__devs 
+  //   margin-left: 10px
+  //   &:before
+  //     background: url(../img/devs.jpg) no-repeat 
+  //     background-size: cover
+  //     background-position: center
 

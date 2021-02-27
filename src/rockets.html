@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  @@include('_head.html', {
+    "Title": "Launcher"
+  })
+
+<body>
+  @@include('_header.html', {
+    "Name_menu": "Ракеты"
+  })
+
+  <main class="rockets">
+    <div class="container">
+      <div class="rockets__wrapper">
+        <div class="rockets__slider">
+          <div class="rocket-block">
+            <div class="rocket-block__image">
+              <img class="rocket-block__img" src="img/rockets/sparrow-rocket.png" alt="rocket-img" >
+            </div>
+            <a href="#" class="rocket-block__name">
+              Launcher Sparrow
+              <br>
+              <span>up to 2t to GTO</span>
+            </a>
+          </div>
+          <div class="rocket-block">
+            <div class="rocket-block__image">
+              <img class="rocket-block__img" src="img/rockets/sparrow-rocket.png" alt="rocket-img" >
+            </div>
+            <a href="#" class="rocket-block__name">
+              Launcher Stork
+              <span>up to 2t to GTO</span>
+            </a>
+          </div>
+          <div class="rocket-block">
+            <div class="rocket-block__image">
+              <img class="rocket-block__img" src="img/rockets/sparrow-rocket.png" alt="rocket-img" >
+            </div>
+            <a href="#" class="rocket-block__name">
+              Launcher Eagle
+              <span>up to 2t to GTO</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('_footer.html')
+
+  <script src="js/script.js"></script>
+</body>
+</html>

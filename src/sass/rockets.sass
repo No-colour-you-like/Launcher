@@ -1,0 +1,40 @@
+.rockets 
+  &__wrapper 
+    height: 60vh
+    display: flex
+    align-items: center
+  &__slider 
+    width: 150%
+    height: 100%
+    display: flex
+    flex-shrink: 0
+
+.rocket-block 
+  position: relative
+  width: 50%
+  background-color: #111111
+  margin: 10px
+  &__image
+    height: 100%
+    margin-left: 50px
+  &__img 
+    height: 100%
+  &__name 
+    position: absolute 
+    top: 50%
+    transform: translateY(-50%)
+    left: 40%
+    font-size: 40px
+    text-transform: uppercase
+    color: #fff
+    text-decoration: underline
+    text-decoration-color: rgba(#fff, 0)
+    transition: 1s
+    &:hover 
+      text-decoration: underline
+      text-decoration-color: rgba(#fff, 1)
+    span 
+      font-size: 20px
+
+
+
