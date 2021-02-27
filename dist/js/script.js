@@ -2,7 +2,8 @@
 
 const hamburger = document.querySelector('.hamburger'), 
   headerNav = document.querySelector('.header__nav'),
-  mainSlider = document.querySelector('.main__slider');
+  mainSlider = document.querySelector('.main__slider'),
+  companyBlock = document.querySelectorAll('.company__block');
 
   
 hamburger.addEventListener('click', () => {
@@ -23,6 +24,7 @@ hamburger.addEventListener('click', () => {
     mainSlider.classList.remove('hide-images-anim');
     mainSlider.classList.add('open-images-anim');
   }
+
 });
 
 // Main slider 

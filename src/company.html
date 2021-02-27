@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {
+  "Title": "Компания"
+})
+
+<body>
+  @@include('_header.html', {
+    "Name_menu": "Компания"
+  })
+
+  <main class="company__main">
+    <div class="container">
+      <div class="company__main-wrapper">
+        <div class="company__team company__block">
+          <a href="#" class="company__team-link">Команда</a>
+        </div>
+        <div class="company__devs company__block">
+          <a href="#" class="company__devs-link">Разработки</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('_footer.html')
+
+  <script src="js/company.js"></script>
+</body>
+</html>
