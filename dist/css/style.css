@@ -122,6 +122,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   position: absolute;
   top: 12vh;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -709,6 +710,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .rockets__wrapper {
+  position: relative;
   height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -726,6 +728,23 @@ h1, h2, h3, h4, h5, h6, p, ul {
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.rockets__prev-btn, .rockets__next-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.rockets__next-btn {
+  right: 0;
 }
 
 .rocket-block {
@@ -782,6 +801,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .nav-anim {
   opacity: 1;
+  visibility: visible;
   -webkit-transition: 2s ease-in-out;
   -o-transition: 2s ease-in-out;
   transition: 2s ease-in-out;

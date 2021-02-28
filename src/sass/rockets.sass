@@ -1,5 +1,6 @@
 .rockets 
   &__wrapper 
+    position: relative
     height: 60vh
     display: flex
     align-items: center
@@ -8,6 +9,17 @@
     height: 100%
     display: flex
     flex-shrink: 0
+  &__prev-btn, &__next-btn
+    position: absolute 
+    top: 50%
+    transform: translateY(-50%)
+    width: 30px
+    height: 30px 
+    background-color: #fff
+    cursor: pointer
+    z-index: 1
+  &__next-btn 
+    right: 0
 
 .rocket-block 
   position: relative
