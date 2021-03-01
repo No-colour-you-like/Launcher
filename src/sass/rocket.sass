@@ -1,0 +1,56 @@
+.rocket
+  &__body
+    position: relative
+    &:after
+      position: absolute
+      content: ''
+      display: block
+      top: 0
+      width: 100%
+      height: 100%
+      background: url(../img/rockets/stork-bg.jpg) no-repeat
+      background-size: cover 
+      background-position: center
+      filter: brightness(0.3) grayscale(0.5)
+      z-index: -10
+      transition: 1.5s
+  &__wrapper 
+    height: 70vh
+    @extend %flex-center 
+    position: relative
+  &__title 
+    position: absolute
+    font-size: 20vw
+    text-transform: uppercase
+    letter-spacing: 5vw
+    margin-right: -5vw
+    filter: brightness(0.3) grayscale(0.5)
+    z-index: -5
+  &-about 
+    &__wrapper
+      height: 70vh
+      @extend %flex-between 
+    &__image 
+      height: 100%
+      margin: 0 20px
+    &__img
+      height: 100%
+      object-fit: cover
+    &__text-right, &__text-left 
+      width: 25%
+      font-size: 25px
+      font-style: italic
+      color: #666666 
+    &__text-left 
+      padding-bottom: 120px
+      opacity: 0
+    &__title 
+      font-size: 50px
+      color: #fff
+      font-style: normal
+      margin-bottom: 30px
+
+
+
+
+      

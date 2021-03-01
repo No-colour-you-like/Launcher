@@ -2,10 +2,10 @@
 <html lang="ru">
 
   @@include('_head.html', {
-    "Title": "Launcher"
+    "Title": "Ракеты"
   })
 
-<body>
+<body class="body body-hide">
   @@include('_header.html', {
     "Name_menu": "Ракеты"
   })
@@ -15,34 +15,34 @@
       <div class="rockets__wrapper">
         <div class="rockets__prev-btn"></div>
         <div class="rockets__slider">
-          <div class="rocket-block">
+          <div class="rocket-block rocket-block--sparrow">
             <div class="rocket-block__image">
               <img class="rocket-block__img" src="img/rockets/sparrow-rocket.png" alt="rocket-img" >
             </div>
             <a href="#" class="rocket-block__name">
               Launcher Sparrow
               <br>
-              <span>up to 2t to GTO</span>
+              <span>Грузоподъемность 2т до ГПО</span>
             </a>
           </div>
-          <div class="rocket-block">
+          <div class="rocket-block rocket-block--stork">
             <div class="rocket-block__image">
               <img class="rocket-block__img" src="img/rockets/stork-rocket.png" alt="rocket-img" >
             </div>
-            <a href="#" class="rocket-block__name">
+            <a href="rocket.html" class="rocket-block__name">
               Launcher Stork
               <br>
-              <span>up to 2t to GTO</span>
+              <span>Грузоподъемность 5т до ГПО</span>
             </a>
           </div>
-          <div class="rocket-block">
+          <div class="rocket-block rocket-block--eagle">
             <div class="rocket-block__image">
               <img class="rocket-block__img" src="img/rockets/eagle-rocket.png" alt="rocket-img" >
             </div>
             <a href="#" class="rocket-block__name">
               Launcher Eagle
               <br>
-              <span>up to 2t to GTO</span>
+              <span>Грузоподъемность 15т до ГПО</span>
             </a>
           </div>
         </div>

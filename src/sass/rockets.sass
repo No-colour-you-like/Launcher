@@ -9,23 +9,59 @@
     height: 100%
     display: flex
     flex-shrink: 0
+    transition: 1s
   &__prev-btn, &__next-btn
     position: absolute 
+    background: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='iso-8859-1'?%3e%3c!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3e%3csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512.002 512.002' style='enable-background:new 0 0 512.002 512.002;' xml:space='preserve'%3e%3cg%3e%3cg%3e%3cpath d='M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105 L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795 l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z'/%3e%3c/g%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/svg%3e") no-repeat
     top: 50%
     transform: translateY(-50%)
-    width: 30px
-    height: 30px 
-    background-color: #fff
+    width: 50px
+    height: 50px 
+    background-color: rgba(#fff, 0.5)
+    background-size: 80%
+    background-position: 60% center 
+    border-radius: 50%
+    border: none
+    box-shadow: 0 0 10px 10px rgba(#fff, 0.5)
     cursor: pointer
     z-index: 1
   &__next-btn 
     right: 0
+  &__prev-btn
+    transform: translateY(-50%) rotate(180deg)
 
 .rocket-block 
   position: relative
-  width: 50%
-  background-color: #111111
   margin: 10px
+  overflow: hidden
+  &:before
+    position: absolute
+    content: ''
+    display: block
+    width: 100% 
+    height: 100%
+    transform: scale(1) 
+    filter: grayscale(1)
+    transition: 1s
+    z-index: -1
+  &:hover:before
+    transform: scale(1.1) 
+    filter: grayscale(0)
+  &--stork 
+    &:before 
+      background: url(../img/rockets/stork-bg.jpg) no-repeat
+      background-size: cover
+      background-position: right
+  &--sparrow 
+    &:before 
+      background: url(../img/rockets/sparrow-bg.jpg) no-repeat
+      background-size: cover
+      background-position: center
+  &--eagle
+    &:before 
+      background: url(../img/rockets/eagle-bg.jpg) no-repeat
+      background-size: cover
+      background-position: center
   &__image
     height: 100%
     margin-left: 50px
@@ -35,10 +71,11 @@
     position: absolute 
     top: 50%
     transform: translateY(-50%)
-    left: 40%
+    left: 45%
     font-size: 40px
     text-transform: uppercase
     color: #fff
+    text-shadow: 0 0 20px #000
     text-decoration: underline
     text-decoration-color: rgba(#fff, 0)
     transition: 1s
@@ -47,6 +84,9 @@
       text-decoration-color: rgba(#fff, 1)
     span 
       font-size: 20px
+
+
+      
 
 
 

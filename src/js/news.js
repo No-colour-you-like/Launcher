@@ -1,3 +1,17 @@
+//Body delay opacity
+
+setTimeout(function() {
+  
+  document.querySelector('.body').classList.add('body-visible');
+
+  setTimeout(function() {
+    document.querySelector('.body').classList.remove('body-hide');
+    document.querySelector('.body').classList.remove('body-visible')
+  }, 2000);
+
+}, 200);
+
+
 const newsText = document.querySelectorAll('.news-block__text'), 
  newsImg = document.querySelector('.news-block__img'); 
 

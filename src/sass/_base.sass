@@ -1,8 +1,16 @@
+
 .display-block 
   display: block
 
 .display-none
   display: none
+
+.body-hide 
+  opacity: 0
+
+.body-visible 
+  opacity: 1
+  transition: 1s opacity ease-in
 
 .nav-anim 
   opacity: 1
@@ -11,12 +19,16 @@
 
 .hide-images-anim 
   transition: 1s
-  width: 80% 
+  width: 85% 
   margin-left: auto
   .slider__img 
     transition: 1.5s
     filter: blur(2px) grayscale(100%)
     pointer-events: none
+  .rocket-block__name 
+    font-size: 25px
+    span 
+      font-size: 12px
 
 .open-images-anim 
   transition: 1s
@@ -47,3 +59,33 @@
 .blur-out
   transition: 1s
   filter: blur(0)
+
+.main-active
+  display: block
+
+.rocket-main-visible
+  height: auto
+  transition: 2s
+  transition-delay: 1s
+  opacity: 1
+
+.rocket-main-hide 
+  height: 0
+  opacity: 0
+
+.delete-background 
+   &:after 
+    visibility: hidden
+    opacity: 0
+
+.return-background 
+  &:after 
+    visibility: visible
+    opacity: 1
+
+.white-color
+  color: #fff
+
+.opacity
+  opacity: 1
+  transition: 2s
