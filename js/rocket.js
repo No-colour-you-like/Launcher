@@ -38,6 +38,8 @@ footerLinks.forEach((link, i) => {
   link.addEventListener('click', () => {
 
     rocketMains.forEach(item => {
+
+
       item.classList.add('rocket-main-hide');
       rocketMains[i].classList.remove('rocket-main-hide');
       item.classList.remove('rocket-main-visible');
@@ -52,11 +54,17 @@ footerLinks.forEach((link, i) => {
       }
 
       if (rocketMains[1].classList.contains('rocket-main-visible')) {
+
+        const rocketTextLeft = document.querySelector('.rocket-about__text-left'),
+          rocketTextRight = document.querySelector('.rocket-about__text-right');
+
+        rocketTextLeft.classList.add('text-left-anim', 'opacity')        
+
         setTimeout(function() {
-          document.querySelector('.rocket-about__text-left').classList.add('opacity')
-        }, 2000)
-        
-      }
+          rocketTextRight.classList.add('text-right-anim', 'opacity');
+        }, 3000);
+
+      } 
     });
   });
 });
