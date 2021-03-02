@@ -15,7 +15,10 @@
 .nav-anim 
   opacity: 1
   visibility: visible
-  transition: 2s ease-in-out
+  background-color: rgba(#000, 0.9)
+  box-shadow: 0 0 20px 30px rgba(#000, 0.9)
+  transition: opacity 1s, background-color 3s, box-shadow 3s
+  
 
 .hide-images-anim 
   transition: 1s
@@ -65,13 +68,16 @@
 
 .rocket-main-visible
   height: auto
+  overflow: hidden
+  opacity: 1
   transition: 2s
   transition-delay: 1s
-  opacity: 1
 
 .rocket-main-hide 
   height: 0
+  overflow: hidden
   opacity: 0
+  transition: 2s
 
 .delete-background 
    &:after 
@@ -89,3 +95,12 @@
 .opacity
   opacity: 1
   transition: 2s
+
+.text-left-anim
+  left: 0
+  transition: left 4s ease-in-out, opacity 2s ease-in
+
+
+.text-right-anim
+  left: 0
+  transition: left 2s ease-in-out, opacity 2s ease-in
