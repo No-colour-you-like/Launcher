@@ -1,0 +1,57 @@
+.team
+  &__main 
+    &-wrapper 
+      position: relative
+      display: flex
+      align-items: center
+      height: 70vh
+  &__slider 
+    display: flex
+    flex-shrink: 0
+    align-items: center
+    // width: 200%
+    &-prev, &-next
+      position: absolute
+      width: 30px
+      height: 30px 
+      top: 50%
+      background-color: #fff
+      z-index: 1
+      cursor: pointer
+    &-next 
+      right: 0
+    
+.team-block 
+  display: flex
+  margin: 0 20px
+  max-height: 800px
+  background-color: #111111
+  &__image 
+    text-align: left
+    width: 60%
+    overflow: hidden
+  &__img 
+    display: block
+    height: 100%
+    object-fit: contain
+  &__info 
+    position: relative
+    width: 40%
+    padding: 30px
+  &__spec
+    font-size: 30px
+    margin-bottom: 20px
+  &__name 
+    font-size: 50px
+    margin-bottom: 20px
+  &__text 
+    font-size: 20px
+    line-height: 1.4
+  &__icon 
+    position: absolute 
+    width: 200px
+    height: 200px
+    right: 20px
+    bottom: 0
+    fill: #1E1E1E
+
