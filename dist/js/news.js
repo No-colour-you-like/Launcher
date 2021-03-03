@@ -11,17 +11,29 @@ setTimeout(function() {
 
 }, 200);
 
+// Hamburger menu 
+
+const hamburger = document.querySelector('.hamburger'), 
+  headerNav = document.querySelector('.header__nav');
+
+hamburger.addEventListener('click', () => {
+
+  headerNav.classList.toggle('nav-anim');
+  hamburger.classList.toggle('hamburger-anim');
+   
+});
+
 
 const newsText = document.querySelectorAll('.news-block__text'), 
  newsImg = document.querySelector('.news-block__img'); 
 
 newsText.forEach(item => {
   item.addEventListener('mouseenter', () => {
-    newsImg.classList.remove('blur-out')
-    newsImg.classList.add('blur-in')
-  })
+    newsImg.classList.remove('blur-out');
+    newsImg.classList.add('blur-in');
+  });
   item.addEventListener('mouseleave', () => {
-    newsImg.classList.add('blur-out')
-    newsImg.classList.remove('blur-in')
-  })
-})
+    newsImg.classList.add('blur-out');
+    newsImg.classList.remove('blur-in');
+  });
+});

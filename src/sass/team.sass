@@ -9,23 +9,22 @@
     display: flex
     flex-shrink: 0
     align-items: center
-    // width: 200%
-    &-prev, &-next
-      position: absolute
-      width: 30px
-      height: 30px 
-      top: 50%
-      background-color: #fff
-      z-index: 1
-      cursor: pointer
-    &-next 
-      right: 0
+    transition: 1s
+
+.slider
+  &-prev--team
+    left: -20px
+  &-next--team 
+    right: -20px
     
 .team-block 
   display: flex
-  margin: 0 20px
-  max-height: 800px
+  
+  height: 70vh
   background-color: #111111
+  overflow: hidden
+  &:last-child
+    margin: 0
   &__image 
     text-align: left
     width: 60%
@@ -41,12 +40,14 @@
   &__spec
     font-size: 30px
     margin-bottom: 20px
+    color: #ff1010
   &__name 
     font-size: 50px
     margin-bottom: 20px
   &__text 
     font-size: 20px
     line-height: 1.4
+    color: #8a8a8a
   &__icon 
     position: absolute 
     width: 200px

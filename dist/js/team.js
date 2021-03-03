@@ -24,7 +24,6 @@ hamburger.addEventListener('click', () => {
   headerNav.classList.toggle('nav-anim');
   hamburger.classList.toggle('hamburger-anim');
 
-  mainSlider.removeAttribute('style');
   offset = 0;
    
 });
@@ -32,8 +31,8 @@ hamburger.addEventListener('click', () => {
 // Slider 
 
 const mainWrapper = document.querySelector('.team__main-wrapper');
-  sliderPrev = document.querySelector('.team__slider-prev'),
-  sliderNext = document.querySelector('.team__slider-next'),
+  sliderPrev = document.querySelector('.slider-prev'),
+  sliderNext = document.querySelector('.slider-next'),
   teamBlock = document.querySelectorAll('.team-block');
   width = window.getComputedStyle(mainWrapper).width;
 
@@ -63,7 +62,7 @@ sliderPrev.addEventListener('click', () => {
     offset -= +width.slice(0, width.length - 2);
   }
 
-  mainSlider.style.transform = `translateX(${offset}px)`;
+  mainSlider.style.transform = `translateX(-${offset}px)`;
 
 });
 

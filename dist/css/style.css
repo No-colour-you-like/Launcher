@@ -763,7 +763,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .rockets__wrapper {
   position: relative;
-  height: 60vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,7 +817,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .rocket-block {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 10px;
+  height: 60vh;
   overflow: hidden;
 }
 
@@ -939,6 +946,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
   position: relative;
 }
 
+.rocket__img {
+  display: block;
+  height: 70vh;
+}
+
 .rocket__title {
   position: absolute;
   font-size: 20vw;
@@ -972,6 +984,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .rocket-about__text-right, .rocket-about__text-left, .rocket-payload__text-right, .rocket-payload__text-left, .rocket-engine__text-right, .rocket-engine__text-left, .rocket-information__text-right, .rocket-information__text-left {
   width: 25%;
+  height: 100%;
   font-size: 25px;
   font-style: italic;
   color: #666666;
@@ -1099,29 +1112,30 @@ h1, h2, h3, h4, h5, h6, p, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
-.team__slider-prev, .team__slider-next {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 50%;
-  background-color: #fff;
-  z-index: 1;
-  cursor: pointer;
+.slider-prev--team {
+  left: -20px;
 }
 
-.team__slider-next {
-  right: 0;
+.slider-next--team {
+  right: -20px;
 }
 
 .team-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 20px;
-  max-height: 800px;
+  height: 70vh;
   background-color: #111111;
+  overflow: hidden;
+}
+
+.team-block:last-child {
+  margin: 0;
 }
 
 .team-block__image {
@@ -1146,6 +1160,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .team-block__spec {
   font-size: 30px;
   margin-bottom: 20px;
+  color: #ff1010;
 }
 
 .team-block__name {
@@ -1156,6 +1171,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .team-block__text {
   font-size: 20px;
   line-height: 1.4;
+  color: #8a8a8a;
 }
 
 .team-block__icon {
