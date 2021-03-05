@@ -27,12 +27,14 @@ hamburger.addEventListener('click', () => {
   mainSlider.removeAttribute('style');
   offset = 0;
 
-  if (!mainSlider.classList.contains('hide-images-anim')) {
-    mainSlider.classList.remove('open-images-anim');
-    mainSlider.classList.add('hide-images-anim');
-  } else if (mainSlider.classList.contains('hide-images-anim')) {
-    mainSlider.classList.remove('hide-images-anim');
-    mainSlider.classList.add('open-images-anim');
+  if (window.innerWidth > '992') {
+    if (!mainSlider.classList.contains('hide-images-anim')) {
+      mainSlider.classList.remove('open-images-anim');
+      mainSlider.classList.add('hide-images-anim');
+    } else if (mainSlider.classList.contains('hide-images-anim')) {
+      mainSlider.classList.remove('hide-images-anim');
+      mainSlider.classList.add('open-images-anim');
+    }
   }
 
 })
@@ -48,28 +50,43 @@ const slides = document.querySelectorAll('.rocket-block'),
 
 let offset = 0;
 
-slides.forEach(slide => {
-  slide.style.width = width;
-})
 
 
 sliderNext.addEventListener('click', () => {
-  if (offset == (+width.slice(0, width.length - 2) / 2) * (slides.length - 2)) {
-    offset = 0;
+
+  if (window.innerWidth <= '992') {
+    if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+      offset = 0;
+    } else {
+      offset += +width.slice(0, width.length - 2);
+    }
   } else {
-    offset += +width.slice(0, width.length - 2) / 2 ;
+    if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+      offset = 0;
+    } else {
+      offset += +width.slice(0, width.length - 2) / 2;
+    }
   }
-  
+
   mainSlider.style.transform = `translateX(-${offset}px)`;
 });
 
 sliderPrev.addEventListener('click', () => {
-  if (offset == 0) {
-    offset = (+width.slice(0, width.length - 2) / 2) * (slides.length - 2);
+
+  if (window.innerWidth <= '992') {
+    if (offset == 0) {
+      offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+    } else {
+      offset -= +width.slice(0, width.length - 2);
+    }
+  } else {
+    if (offset == 0) {
+    offset = +width.slice(0, width.length - 2) * (slides.length - 1);
   } else {
     offset -= +width.slice(0, width.length - 2) / 2;
   }
-  
+  }
+
   mainSlider.style.transform = `translateX(-${offset}px)`;
 
 });

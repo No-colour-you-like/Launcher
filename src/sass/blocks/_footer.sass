@@ -6,13 +6,27 @@
   &__wrapper 
     position: relative
     @extend %flex-between
+    padding: 5px 0
+    @include media($tablet)
+      flex-direction: column
+      justify-content: center
   &__links
     @extend %flex-between
     width: 200px
+    @include media($tablet) 
+      margin-bottom: 18px
+    @include media($port-phone)
+      align-self: start
+      justify-content: start
+      margin-bottom: 5px
   &__icons 
     width: 30px
     height: 30px
     fill: #fff
+    @include media($port-phone) 
+      width: 20px
+      height: 20px
+      margin-right: 15px
   &__copyright
     position: absolute 
     left: 50%
@@ -20,15 +34,30 @@
     display: flex
     flex-direction: column
     align-items: center
+    @include media($tablet) 
+      left: auto 
+      top: 0
+      right: 0
+      transform: translateX(0)
     &-title 
       font-size: 25px
       margin-bottom: 10px
       color: #3A3A3A
+      @include media(1100px) 
+        font-size: 20px
+      @include media($tablet) 
+        font-size: 12px
+      @include media($land-phone)
+        font-size: 10px 
+      @include media($port-phone)
+        font-size: 10px 
     &-subtitle 
       display: flex
       align-items: center
       font-size: 15px
       color: #3A3A3A
+      @include media(1100px) 
+        font-size: 12px
     &-icon
       width: 15px 
       height: 15px
@@ -37,10 +66,22 @@
   &__subscr 
     display: flex 
     align-items: center
+    @include media(1600px) 
+      flex-direction: column
+      align-items: start
+    @include media($tablet)
+      flex-direction: row
+      align-items: center
+    @include media($port-phone) 
+      flex-direction: column
     &-text 
       font-size: 25px 
       color: #fff 
       margin-right: 15px
+      @include media(1600px) 
+        margin-bottom: 10px
+      @include media($port-phone)
+        font-size: 10px
   &__form 
     display: flex
   &__input 
@@ -52,12 +93,16 @@
     outline: none
     border: none
     margin-right: 10px
+    @include media($port-phone)
+      max-height: 40px
   &__btn 
     @extend %flex-center
     background-color: #3A3A3A 
     width: 50px 
     height: 50px
     border: none
+    @include media($port-phone)
+      max-height: 40px
     &-icon 
       width: 20px 
       height: 20px

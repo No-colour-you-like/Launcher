@@ -43,24 +43,35 @@
     &__wrapper
       height: 70vh
       @extend %flex-between 
+      @include media($desktop)
+        flex-direction: column
+        overflow-y: scroll
     &__image 
-      margin: 0 40px
-      text-align: center
+      width: 40%
+      margin: 0 20px
+      @include media($desktop) 
+        width: 70%
+        margin: 20px 0
     &__img
-      width: 80%
+      width: 100%
       max-height: 70vh
       object-fit: contain
     &__text-right, &__text-left 
-      width: 25%
-      height: 100%
+      width: 60%
       font-size: 25px
       font-style: italic
       color: #666666 
+      @include media(1920px) 
+        font-size: 20px
+      @include media($desktop) 
+        width: 100%
     &__text-left
       position: relative 
       padding-bottom: 120px
       left: -100px
       opacity: 0
+      @include media($desktop) 
+        padding-bottom: 0
     &__text-right
       position: relative  
       left: 100px

@@ -1,17 +1,18 @@
 .rocket-footer 
   &__wrapper
-    width: 50%
+    max-width: 80%
     height: 15vh
     min-height: 80px
     display: flex
     justify-content: space-between
     align-items: center
+    flex-wrap: wrap
     margin: 0 auto
     font-size: 30px
   &__link 
     position: relative
     cursor: pointer
-    color: #373739
+    color: #757575
     transition: 0.5s
     &:after 
       opacity: 0
@@ -29,3 +30,15 @@
       color: #fff
       &:after 
         opacity: 1
+    @include media(1000px)
+      &:last-child
+        text-align: center
+        width: 100%
+    @include media($land-phone)
+      &:nth-child(4)
+        text-align: center
+        width: 50%
+      &:last-child
+        width: 50%
+    @include media($port-phone)
+      font-size: 20px
