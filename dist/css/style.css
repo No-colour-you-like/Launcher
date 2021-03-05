@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 50px;
 }
 
 .header__menu {
@@ -105,7 +106,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: -60%;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -126,7 +127,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .header__nav {
   position: absolute;
-  top: 12vh;
+  top: 80px;
   opacity: 0;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0);
@@ -973,6 +974,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
 .rockets__slider {
@@ -1017,14 +1019,33 @@ h1, h2, h3, h4, h5, h6, p, ul {
   z-index: 1;
 }
 
+@media (max-width: 576px) {
+  .rockets__prev-btn, .rockets__next-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .rockets__next-btn {
   right: 0;
+}
+
+@media (max-width: 576px) {
+  .rockets__next-btn {
+    right: 20px;
+  }
 }
 
 .rockets__prev-btn {
   -webkit-transform: translateY(-50%) rotate(180deg);
       -ms-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
+}
+
+@media (max-width: 576px) {
+  .rockets__prev-btn {
+    left: 20px;
+  }
 }
 
 .rocket-block {
@@ -1209,6 +1230,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
         -ms-flex-direction: column;
             flex-direction: column;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
@@ -1232,10 +1254,12 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .rocket-about__text-right, .rocket-about__text-left, .rocket-payload__text-right, .rocket-payload__text-left, .rocket-engine__text-right, .rocket-engine__text-left, .rocket-information__text-right, .rocket-information__text-left {
+  position: relative;
   width: 60%;
   font-size: 25px;
   font-style: italic;
   color: #666666;
+  opacity: 0;
 }
 
 @media (max-width: 1920px) {
@@ -1251,10 +1275,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .rocket-about__text-left, .rocket-payload__text-left, .rocket-engine__text-left, .rocket-information__text-left {
-  position: relative;
   padding-bottom: 120px;
   left: -100px;
-  opacity: 0;
 }
 
 @media (max-width: 1200px) {
@@ -1264,9 +1286,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .rocket-about__text-right, .rocket-payload__text-right, .rocket-engine__text-right, .rocket-information__text-right {
-  position: relative;
   left: 100px;
-  opacity: 0;
 }
 
 .rocket-about__title, .rocket-payload__title, .rocket-engine__title, .rocket-information__title {
@@ -1278,6 +1298,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .rocket-payload__image {
   position: relative;
+  width: 100%;
 }
 
 .rocket-payload__image:before {
@@ -1296,6 +1317,13 @@ h1, h2, h3, h4, h5, h6, p, ul {
   z-index: -10;
 }
 
+@media (max-width: 576px) {
+  .rocket-payload__image:before {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .rocket-payload__img {
   width: 100%;
 }
@@ -1303,7 +1331,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .rocket-payload__text-left, .rocket-payload__text-right {
   opacity: 1;
   left: 0;
-  width: 40%;
 }
 
 .rocket-payload__text-left {
@@ -1323,6 +1350,12 @@ h1, h2, h3, h4, h5, h6, p, ul {
   color: #fff;
 }
 
+@media (max-width: 576px) {
+  .rocket-payload__left-title {
+    margin-bottom: 5px;
+  }
+}
+
 .rocket-engine__image {
   width: 100%;
 }
@@ -1334,7 +1367,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .rocket-engine__text-left, .rocket-engine__text-right {
   opacity: 1;
   left: 0;
-  width: 60%;
 }
 
 .rocket-engine__text-left {
@@ -1344,7 +1376,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .rocket-information__text-left {
   opacity: 1;
   left: 0;
-  width: 50%;
   padding-bottom: 0;
 }
 
@@ -1356,6 +1387,31 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .rocket-information__image {
   width: 100%;
+}
+
+@media (max-width: 576px) {
+  .rocket-information__title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .rocket-payload__text-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .rocket-payload__left-name {
+    margin: 10px;
+  }
+  .rocket-payload__left-title {
+    font-size: 22px;
+  }
 }
 
 .team__main-wrapper {

@@ -4,6 +4,7 @@
     height: 70vh
     display: flex
     align-items: center
+    overflow-x: hidden
   &__slider 
     width: 150%
     height: 100%
@@ -28,10 +29,17 @@
     box-shadow: 0 0 10px 10px rgba(#fff, 0.5)
     cursor: pointer
     z-index: 1
+    @include media($port-phone) 
+      width: 30px
+      height: 30px
   &__next-btn 
     right: 0
+    @include media($port-phone) 
+      right: 20px
   &__prev-btn
     transform: translateY(-50%) rotate(180deg)
+    @include media($port-phone) 
+      left: 20px
 
 .rocket-block 
   position: relative

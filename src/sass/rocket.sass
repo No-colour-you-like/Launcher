@@ -46,6 +46,7 @@
       @include media($desktop)
         flex-direction: column
         overflow-y: scroll
+        overflow-x: hidden
     &__image 
       width: 40%
       margin: 0 20px
@@ -57,25 +58,23 @@
       max-height: 70vh
       object-fit: contain
     &__text-right, &__text-left 
+      position: relative 
       width: 60%
       font-size: 25px
       font-style: italic
       color: #666666 
+      opacity: 0
       @include media(1920px) 
         font-size: 20px
-      @include media($desktop) 
+      @include media(1200px) 
         width: 100%
-    &__text-left
-      position: relative 
+    &__text-left 
       padding-bottom: 120px
       left: -100px
-      opacity: 0
       @include media($desktop) 
         padding-bottom: 0
     &__text-right
-      position: relative  
       left: 100px
-      opacity: 0 
     &__title 
       font-size: 50px
       color: #fff
@@ -84,6 +83,7 @@
   &-payload 
     &__image 
       position: relative
+      width: 100%
       &:before
         position: absolute
         content: ''
@@ -96,12 +96,14 @@
         background-color: #18181B
         border-radius: 50%
         z-index: -10
+        @include media($port-phone)
+          width: 200px
+          height: 200px
     &__img 
       width: 100%
     &__text-left, &__text-right
       opacity: 1
       left: 0
-      width: 40%
     &__text-left 
       padding-bottom: 0
     &__left-title 
@@ -113,6 +115,8 @@
         display: block
         margin-top: 5px
         color: #fff
+      @include media($port-phone) 
+        margin-bottom: 5px
   &-engine 
     &__image 
       width: 100%
@@ -121,14 +125,12 @@
     &__text-left, &__text-right
       opacity: 1
       left: 0
-      width: 60%
     &__text-left 
       padding-bottom: 0
   &-information 
     &__text-left
       opacity: 1
       left: 0
-      width: 50%
       padding-bottom: 0
     &__part 
       font-style: normal
@@ -136,6 +138,20 @@
       margin-bottom: 30px
     &__image 
       width: 100%
+    &__title 
+      @include media($port-phone)
+        font-size: 35px
+  &-payload
+    @include media($desktop)
+      &__text-left 
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+      &__left-name
+        margin: 10px
+      &__left-title 
+        font-size: 22px
+
 
 
 
