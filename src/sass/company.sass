@@ -3,8 +3,9 @@
     &-wrapper 
       height: 70vh
       display: flex 
-      justify-content: flex-end
       align-items: center  
+      @include media($land-phone) 
+        flex-direction: column
   &__team, &__devs
     width: 50%
     height: 80%
@@ -23,12 +24,14 @@
       &:before
         transform: scale(1.2)
         filter: grayscale(0) blur(0)
+    @include media($land-phone)  
+      width: 100%
     &-link
       position: absolute
       top: 50%
       left: 50% 
       transform: translate(-50%, -50%) 
-      font-size: 50px 
+      font-size: 45px 
       color: #fff
       text-decoration: underline
       text-decoration-color: rgba(#fff, 0)
@@ -42,8 +45,12 @@
       background: url(../img/team.jpg) no-repeat 
       background-size: cover
       background-position: center
+    @include media($land-phone) 
+      margin-right: 0
+      margin-bottom: 20px
   &__devs
     position: relative
+    margin-left: 10px
     &-video 
       position: absolute
       width: 100% 
@@ -51,4 +58,6 @@
       top: 0
       left: 0
       object-fit: cover
+    @include media($land-phone) 
+      margin-left: 0
 

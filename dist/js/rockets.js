@@ -61,10 +61,10 @@ sliderNext.addEventListener('click', () => {
       offset += +width.slice(0, width.length - 2);
     }
   } else {
-    if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+    if (offset == +width.slice(0, width.length - 2) / 4 * (slides.length - 1)) {
       offset = 0;
     } else {
-      offset += +width.slice(0, width.length - 2) / 2;
+      offset += +width.slice(0, width.length - 2) / 4;
     }
   }
 
