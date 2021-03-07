@@ -5,18 +5,29 @@
     grid-template-rows: 400px 500px 500px
     gap: 30px 30px 
     grid-template-areas: "title-block title-block" "news-block-1 news-block-2" "news-block-3 news-block-4"
+    margin: 20px 0
     @include media(1300px)
       grid-template-rows: 300px 350px 350px
-
-      
+    @include media($desktop)
+      margin: 20px 0 40px
+    @include media($land-phone)
+      grid-template-columns: 1fr
+      grid-template-areas: "title-block" "news-block-1" "news-block-2" "news-block-3" "news-block-4"
+      grid-template-rows: repeat(5, 400px)
+    
 .title-block 
   grid-area: title-block
   display: flex
   overflow: hidden
   max-width: 2000px
   justify-self: center
+  @include media($land-phone)
+    flex-direction: column
   &__image
     width: 60%
+    @include media($land-phone)
+      width: 100%
+      height: 50%
   &__img 
     width: 100%
     height: 100%
@@ -25,6 +36,9 @@
     width: 40%
     padding: 20px
     background-color: #151515
+    @include media($land-phone)
+      width: 100%
+      overflow-y: scroll
   &__uppertitle
     font-size: 20px 
     margin-bottom: 10px 
@@ -40,11 +54,22 @@
       &:hover 
         text-decoration: underline
         text-decoration-color: rgba(#fff, 1)
+    @include media(1300px) 
+      font-size: 20px
+    @include media($desktop)
+      font-size: 17px
   &__info 
     font-family: inherit
     font-size: 15px
     margin-bottom: 15px
     line-height: 1.2
+    @include media(1300px)  
+      font-size: 12px
+    @include media($desktop) 
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 3
+      overflow: hidden
     
 .news-block 
   max-width: 985px
@@ -63,11 +88,13 @@
     display: block
     width: 100%
   &__text 
-    padding: 40px
+    padding: 40px 40px 0
     background-color: #151515
-    transition: 1s
+    transition: 1.5s ease-in-out
     z-index: 5
     overflow: hidden
+    @include media(1300px)
+      padding: 30px 30px 0
   &__uppertitle
     font-size: 20px 
     margin-bottom: 5px 
@@ -83,10 +110,17 @@
       &:hover 
         text-decoration: underline
         text-decoration-color: rgba(#fff, 1)
+    @include media(1300px)
+      font-size: 20px
   &__info 
     font-family: inherit
     font-size: 15px
     margin-bottom: 15px
+    @include media($desktop)
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 2
+      overflow: hidden
   &__news-color
     color: #FFE34D
   &__update-color 

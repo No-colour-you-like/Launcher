@@ -26,31 +26,29 @@ hamburger.addEventListener('click', () => {
 // Change height text on hover
 
 const newsText = document.querySelectorAll('.news-block__text'), 
-  newsUppertitle = document.querySelector('.news-block__uppertitle'),
-  newsTitle = document.querySelector('.news-block__title'),
-  newsImg = document.querySelector('.news-block__img'); 
-
-
-  let textTitleHeight = window.getComputedStyle(newsTitle).height,
-  textUppertitleHeight = window.getComputedStyle(newsUppertitle).height;
-
+  newsUppertitle = document.querySelectorAll('.news-block__uppertitle'),
+  newsTitle = document.querySelectorAll('.news-block__title'),
+  newsImg = document.querySelectorAll('.news-block__img'); 
 
 
 newsText.forEach((item, i) => {
 
-  let smallTextHeight = +textTitleHeight.slice(0, textTitleHeight.length - 2) + +textUppertitleHeight.slice(0, textUppertitleHeight.length - 2) + 80 + 'px';
+  let textTitleHeight = window.getComputedStyle(newsTitle[i]).height,
+  textUppertitleHeight = window.getComputedStyle(newsUppertitle[i]).height;
 
-  newsText[i].style.height = smallTextHeight;
+  let smallTextHeight = +textTitleHeight.slice(0, textTitleHeight.length - 2) + +textUppertitleHeight.slice(0, textUppertitleHeight.length - 2) + 50 + 'px';
+
+  newsText[i].style.maxHeight = smallTextHeight;
 
   item.addEventListener('mouseenter', () => {
-    newsImg.classList.remove('blur-out');
-    newsImg.classList.add('blur-in');
-    item.style.height = 'auto';
+    newsImg[i].classList.remove('blur-out');
+    newsImg[i].classList.add('blur-in');
+    item.style.maxHeight = '700px';
   });
   item.addEventListener('mouseleave', () => {
-    newsImg.classList.add('blur-out');
-    newsImg.classList.remove('blur-in');
-    item.style.height = smallTextHeight;
+    newsImg[i].classList.add('blur-out');
+    newsImg[i].classList.remove('blur-in');
+    item.style.maxHeight = smallTextHeight;
   });
 });
 
