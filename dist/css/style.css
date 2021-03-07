@@ -110,11 +110,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: 0;
+  top: 60%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .header__underlogo-text {
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 @media (max-width: 576px) {
   .logo {
-    width: 200px;
+    width: 210px;
   }
 }
 
@@ -1477,6 +1477,10 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .rocket-engine__text-left {
   padding-bottom: 0;
+}
+
+.rocket-engine__video {
+  width: 100%;
 }
 
 .rocket-information__text-left {
