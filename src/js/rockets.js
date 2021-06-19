@@ -1,23 +1,17 @@
-//Body delay opacity
-
-setTimeout(function() {
-  
-  document.querySelector('.body').classList.add('body-visible');
-
-  setTimeout(function() {
-    document.querySelector('.body').classList.remove('body-hide');
-    document.querySelector('.body').classList.remove('body-visible')
-  }, 2000);
-
-}, 200);
-
-
+'use strict';
 
 const hamburger = document.querySelector('.hamburger'), 
-  headerNav = document.querySelector('.header__nav');
+  headerNav = document.querySelector('.header__nav'),
+  slides = document.querySelectorAll('.rocket-block'),
+  mainSlider = document.querySelector('.rockets__slider'),
+  sliderPrev = document.querySelector('.rockets__prev-btn'),
+  sliderNext = document.querySelector('.rockets__next-btn'),
+  sliderWrapper = document.querySelector('.rockets__wrapper'),
+  width = window.getComputedStyle(sliderWrapper).width; 
+
+let offset = 0;
 
 hamburger.addEventListener('click', () => {
-
   headerNav.classList.toggle('nav-anim');
   hamburger.classList.toggle('hamburger-anim');
 
@@ -36,24 +30,10 @@ hamburger.addEventListener('click', () => {
       mainSlider.classList.add('open-images-anim');
     }
   }
-
 })
 
 // Rocket slider 
-
-const slides = document.querySelectorAll('.rocket-block'),
-  mainSlider = document.querySelector('.rockets__slider'),
-  sliderPrev = document.querySelector('.rockets__prev-btn'),
-  sliderNext = document.querySelector('.rockets__next-btn'),
-  sliderWrapper = document.querySelector('.rockets__wrapper'),
-  width = window.getComputedStyle(sliderWrapper).width; 
-
-let offset = 0;
-
-
-
 sliderNext.addEventListener('click', () => {
-
   if (window.innerWidth <= '992') {
     if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
       offset = 0;
@@ -72,7 +52,6 @@ sliderNext.addEventListener('click', () => {
 });
 
 sliderPrev.addEventListener('click', () => {
-
   if (window.innerWidth <= '992') {
     if (offset == 0) {
       offset = +width.slice(0, width.length - 2) * (slides.length - 1);
@@ -88,5 +67,4 @@ sliderPrev.addEventListener('click', () => {
   }
 
   mainSlider.style.transform = `translateX(-${offset}px)`;
-
 });
